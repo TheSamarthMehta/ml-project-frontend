@@ -16,7 +16,7 @@ export interface ChipGroupProps {
   type?: 'radio' | 'chip'
 }
 
-export function ChipGroup({ name, options, label, variant = 'default', type = 'chip' }: ChipGroupProps) {
+export function ChipGroup({ name, options, label, type = 'chip' }: ChipGroupProps) {
   const { watch, setValue, register } = useFormContext<FormValues>()
   const currentValue = watch(name)
 

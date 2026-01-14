@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Activity, AlertCircle, User } from 'lucide-react'
+import { AlertCircle, User } from 'lucide-react'
 import type { PredictionResult } from '../types/model'
 import type { FormValues } from '../lib/constants'
 import { riskMeta } from '../lib/risk'

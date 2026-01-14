@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes, SelectHTMLAttributes, ReactNode } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { Input } from '../ui/Input'
 import { useFormContext } from 'react-hook-form'
 import type { FormValues } from '../../lib/constants'

@@ -229,7 +229,7 @@ export function Contact() {
                 If you're experiencing a medical emergency, please call 911 or visit
                 your nearest emergency room immediately.
               </p>
-              <Button variant="outline" className="support-button">
+              <Button variant="secondary" className="support-button">
                 Emergency Resources
               </Button>
             </Card>
