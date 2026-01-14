@@ -1,0 +1,69 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all var(--transition-fast) ease;
+}
+
+.badge--default {
+  background: var(--surface-2);
+  color: var(--text-1);
+  border: 1px solid var(--border);
+}
+
+.badge--default:hover {
+  background: var(--surface-3);
+  border-color: var(--accent);
+}
+
+.badge--success {
+  background: var(--success-light);
+  color: var(--success);
+  border: 1px solid color-mix(in srgb, var(--success) 35%, transparent);
+  font-weight: 600;
+}
+
+.badge--success:hover {
+  background: color-mix(in srgb, var(--success) 22%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--success) 20%, transparent);
+}
+
+.badge--warning {
+  background: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
+  font-weight: 600;
+}
+
+.badge--warning:hover {
+  background: color-mix(in srgb, var(--warning) 22%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--warning) 20%, transparent);
+}
+
+.badge--danger {
+  background: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid color-mix(in srgb, var(--danger) 35%, transparent);
+  font-weight: 600;
+}
+
+.badge--danger:hover {
+  background: color-mix(in srgb, var(--danger) 22%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--danger) 20%, transparent);
+}
+
+.badge--info {
+  background: var(--info-light);
+  color: var(--info);
+  border: 1px solid color-mix(in srgb, var(--info) 35%, transparent);
+  font-weight: 600;
+}
+
+.badge--info:hover {
+  background: color-mix(in srgb, var(--info) 22%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--info) 20%, transparent);
+}

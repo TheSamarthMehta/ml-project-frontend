@@ -1,0 +1,180 @@
+/* Contact Page Styles */
+.contact-page {
+  @apply min-h-screen;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+  @apply py-16 px-4;
+  @apply max-w-6xl mx-auto;
+  @apply mt-8;
+}
+
+.contact-info-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.contact-info-card {
+  @apply p-6 rounded-2xl text-center;
+  @apply bg-white dark:bg-slate-800;
+  @apply border border-slate-200 dark:border-slate-700;
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl hover:border-accent;
+  @apply no-underline;
+}
+
+.contact-info-icon {
+  @apply w-14 h-14 rounded-xl mx-auto mb-4;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+  @apply flex items-center justify-center;
+  @apply text-white;
+}
+
+.contact-info-title {
+  @apply text-lg font-bold mb-2;
+  @apply text-slate-900 dark:text-white;
+}
+
+.contact-info-content {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  @apply py-16 px-4;
+  @apply max-w-7xl mx-auto;
+}
+
+.contact-form-container {
+  @apply grid lg:grid-cols-3 gap-8;
+}
+
+.contact-form-card {
+  @apply lg:col-span-2 p-8;
+}
+
+.form-title {
+  @apply text-2xl md:text-3xl font-bold mb-2;
+  @apply text-slate-900 dark:text-white;
+}
+
+.form-subtitle {
+  @apply text-slate-600 dark:text-slate-400 mb-8;
+}
+
+.contact-form {
+  @apply space-y-6;
+}
+
+.form-row {
+  @apply grid md:grid-cols-2 gap-6;
+}
+
+.form-group {
+  @apply space-y-2;
+}
+
+.form-group label {
+  @apply block text-sm font-medium;
+  @apply text-slate-700 dark:text-slate-300;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  @apply w-full px-4 py-3 rounded-xl;
+  @apply bg-slate-50 dark:bg-slate-900;
+  @apply border border-slate-200 dark:border-slate-700;
+  @apply text-slate-900 dark:text-white;
+  @apply transition-all duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+}
+
+.form-group textarea {
+  @apply resize-none;
+}
+
+.submit-button {
+  @apply w-full md:w-auto;
+}
+
+/* Success Message */
+.success-message {
+  @apply text-center py-12;
+}
+
+.success-icon {
+  @apply w-20 h-20 rounded-full mx-auto mb-6;
+  @apply bg-gradient-to-br from-green-500 to-emerald-500;
+  @apply flex items-center justify-center;
+  @apply text-white text-4xl font-bold;
+  @apply shadow-xl;
+}
+
+.success-message h3 {
+  @apply text-2xl font-bold mb-2;
+  @apply text-slate-900 dark:text-white;
+}
+
+.success-message p {
+  @apply text-slate-600 dark:text-slate-400;
+}
+
+/* Side Info */
+.contact-side-info {
+  @apply lg:col-span-1 space-y-6;
+}
+
+.faq-card,
+.support-card {
+  @apply p-6;
+}
+
+.faq-title,
+.support-title {
+  @apply text-xl font-bold mb-4;
+  @apply text-slate-900 dark:text-white;
+}
+
+.faq-list {
+  @apply space-y-4;
+}
+
+.faq-item h4 {
+  @apply font-semibold mb-1;
+  @apply text-slate-900 dark:text-white;
+}
+
+.faq-item p {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+}
+
+.support-text {
+  @apply text-sm text-slate-600 dark:text-slate-400 mb-4;
+  @apply leading-relaxed;
+}
+
+.support-button {
+  @apply w-full;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-form-container {
+    @apply grid-cols-1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    @apply text-3xl;
+  }
+  
+  .contact-info-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .form-row {
+    @apply grid-cols-1;
+  }
+}

@@ -1,0 +1,127 @@
+.risk-meter {
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  background: var(--meter-gradient);
+  color: #eef3ff;
+  margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.risk-meter::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.risk-meter::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -20%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.risk-meter__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-5);
+  position: relative;
+  z-index: 1;
+}
+
+.risk-gauge {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto var(--space-5);
+  z-index: 1;
+}
+
+.risk-gauge__svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.risk-gauge__value {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
+}
+
+.risk-meter__title {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+}
+
+.risk-meter__percent {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: var(--space-2) 0;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.risk-meter__bar {
+  width: 100%;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.risk-meter__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+  position: relative;
+}
+
+.risk-meter__fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  border-radius: var(--radius-full);
+}
+
+.risk-meter__scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  color: #cdd6ee;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}

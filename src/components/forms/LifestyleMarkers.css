@@ -1,0 +1,137 @@
+.lifestyle-markers {
+  width: 100%;
+}
+
+.lifestyle-markers__checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+
+.checkbox-option__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-option__custom {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #94a3b8;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.checkbox-option--checked .checkbox-option__custom {
+  border-color: #3b82f6;
+  background: transparent;
+}
+
+.checkbox-option--checked .checkbox-option__custom::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3b82f6;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.checkbox-option__label {
+  font-weight: 500;
+  color: #475569;
+  font-size: 15px;
+  user-select: none;
+}
+
+/* Dark mode support using class-based theming */
+.dark .checkbox-option__custom {
+  border-color: #64748b;
+}
+
+.dark .checkbox-option__label {
+  color: #e2e8f0;
+}
+
+.dark .checkbox-option--checked .checkbox-option__custom {
+  border-color: #3b82f6;
+}
+
+.dark .checkbox-option--checked .checkbox-option__custom::after {
+  color: #3b82f6;
+}
+
+/* Also support prefers-color-scheme for systems without manual toggle */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .checkbox-option__custom {
+    border-color: #64748b;
+  }
+
+  html:not(.light) .checkbox-option__label {
+    color: #e2e8f0;
+  }
+  
+  html:not(.light) .checkbox-option--checked .checkbox-option__custom {
+    border-color: #3b82f6;
+  }
+  
+  html:not(.light) .checkbox-option--checked .checkbox-option__custom::after {
+    color: #3b82f6;
+  }
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) and (max-width: 767px) {
+  .lifestyle-markers__checkboxes {
+    gap: 1.75rem;
+  }
+
+  .checkbox-option__custom {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox-option__label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 639px) {
+  .lifestyle-markers__checkboxes {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkbox-option {
+    gap: 0.625rem;
+  }
+
+  .checkbox-option__custom {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox-option--checked .checkbox-option__custom::after {
+    font-size: 14px;
+  }
+
+  .checkbox-option__label {
+    font-size: 14px;
+  }
+}

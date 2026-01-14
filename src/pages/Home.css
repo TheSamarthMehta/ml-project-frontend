@@ -1,0 +1,536 @@
+/* Home Page Styles */
+.home-page {
+  @apply min-h-screen;
+}
+
+/* Quick Actions */
+.quick-actions {
+  @apply -mt-8 px-4 relative z-10;
+}
+
+.quick-actions-container {
+  @apply max-w-7xl mx-auto;
+}
+
+.action-buttons {
+  @apply flex flex-wrap items-center justify-center gap-4;
+}
+
+.action-button {
+  @apply inline-flex items-center gap-3 px-8 py-4 rounded-xl;
+  @apply font-bold text-lg;
+  @apply transition-all duration-300;
+  @apply no-underline;
+  @apply shadow-xl;
+}
+
+.action-button.primary {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600;
+  @apply text-white;
+  @apply hover:shadow-2xl hover:scale-105;
+}
+
+.action-button.secondary {
+  @apply bg-white dark:bg-slate-800;
+  @apply text-accent;
+  @apply border-2 border-accent;
+  @apply hover:bg-accent hover:text-white;
+}
+
+/* Stats Section */
+.stats-section-home {
+  @apply py-20 px-4;
+  @apply bg-gradient-to-b from-transparent to-slate-50 dark:to-slate-900/50;
+}
+
+.stats-container {
+  @apply max-w-6xl mx-auto;
+  @apply grid grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.stat-item {
+  @apply text-center p-6 rounded-2xl;
+  @apply bg-white dark:bg-slate-800;
+  @apply border border-slate-200 dark:border-slate-700;
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl hover:scale-105;
+}
+
+.stat-icon-wrapper {
+  @apply w-12 h-12 rounded-xl mx-auto mb-4;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+  @apply flex items-center justify-center;
+  @apply text-white;
+}
+
+.stat-value {
+  @apply text-3xl font-bold;
+  @apply bg-gradient-to-r from-blue-500 to-blue-600;
+  @apply bg-clip-text text-transparent;
+  @apply mb-1;
+}
+
+.stat-label {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+  @apply font-medium;
+}
+
+/* Features Section */
+.features-section-home {
+  @apply py-20 px-4;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto;
+}
+
+.section-header {
+  @apply text-center mb-16;
+}
+
+.section-title-home {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+  @apply text-slate-900 dark:text-white;
+}
+
+.section-subtitle-home {
+  @apply text-lg text-slate-600 dark:text-slate-400;
+  @apply max-w-2xl mx-auto;
+}
+
+.features-grid-home {
+  @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.feature-card-home {
+  @apply p-6 h-full text-center;
+  @apply transition-all duration-300;
+  @apply hover:shadow-2xl hover:scale-105;
+}
+
+.feature-icon-home {
+  @apply w-14 h-14 rounded-xl mx-auto mb-4;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+  @apply flex items-center justify-center;
+  @apply text-white;
+}
+
+.feature-title-home {
+  @apply text-xl font-bold mb-3;
+  @apply text-slate-900 dark:text-white;
+}
+
+.feature-description-home {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+  @apply leading-relaxed;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  @apply py-20 px-4;
+  @apply bg-slate-50 dark:bg-slate-900/50;
+}
+
+.steps-grid {
+  @apply grid md:grid-cols-3 gap-8;
+}
+
+.step-card {
+  @apply relative p-8 rounded-2xl;
+  @apply bg-white dark:bg-slate-800;
+  @apply border border-slate-200 dark:border-slate-700;
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl hover:scale-105;
+}
+
+.step-number {
+  @apply w-16 h-16 rounded-full mb-6;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+  @apply flex items-center justify-center;
+  @apply text-white text-2xl font-bold;
+}
+
+.step-title {
+  @apply text-2xl font-bold mb-3;
+  @apply text-slate-900 dark:text-white;
+}
+
+.step-description {
+  @apply text-slate-600 dark:text-slate-400;
+  @apply leading-relaxed;
+}
+
+/* Benefits Section */
+.benefits-section-home {
+  @apply py-20 px-4;
+}
+
+.benefits-content {
+  @apply grid lg:grid-cols-2 gap-12 items-center;
+}
+
+.benefits-text {
+  @apply space-y-6;
+}
+
+.benefits-title {
+  @apply text-3xl md:text-4xl font-bold;
+  @apply text-slate-900 dark:text-white;
+}
+
+.benefits-subtitle {
+  @apply text-lg text-slate-600 dark:text-slate-400;
+  @apply leading-relaxed;
+}
+
+.benefits-list {
+  @apply space-y-4;
+}
+
+.benefit-item-home {
+  @apply flex items-start gap-3;
+}
+
+.benefit-check {
+  @apply w-6 h-6 flex-shrink-0 text-accent mt-0.5;
+}
+
+.benefits-visual {
+  @apply flex items-center justify-center;
+}
+
+.visual-card {
+  @apply relative w-64 h-64 rounded-3xl;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+  @apply flex items-center justify-center;
+  @apply shadow-2xl;
+}
+
+.visual-icon {
+  @apply w-24 h-24 text-white;
+  @apply relative z-10;
+}
+
+.visual-pulse {
+  @apply absolute inset-0 rounded-3xl;
+  @apply bg-white/20;
+  @apply animate-ping;
+}
+
+/* CTA Section */
+.cta-section-home {
+  @apply py-20 px-4;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+}
+
+.cta-content {
+  @apply text-center text-white;
+}
+
+.cta-title-home {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+}
+
+.cta-subtitle-home {
+  @apply text-lg md:text-xl mb-8;
+  @apply opacity-90;
+}
+
+.cta-button-home {
+  @apply inline-flex items-center gap-3 px-10 py-5 rounded-xl;
+  @apply bg-white text-accent;
+  @apply font-bold text-xl;
+  @apply transition-all duration-300;
+  @apply hover:shadow-2xl hover:scale-105;
+  @apply no-underline;
+  @apply mb-6;
+}
+
+.cta-disclaimer {
+  @apply text-sm opacity-75;
+}
+
+/* Responsive Styles */
+
+/* Tablet - Portrait (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .action-buttons {
+    @apply flex-col gap-3;
+  }
+
+  .action-button {
+    @apply w-full px-6 py-3 text-base;
+  }
+
+  .stats-container {
+    @apply grid-cols-2 gap-4;
+  }
+
+  .stat-icon-wrapper {
+    @apply w-10 h-10 mb-3;
+  }
+
+  .stat-value {
+    @apply text-2xl;
+  }
+
+  .section-title-home {
+    @apply text-2xl md:text-3xl;
+  }
+
+  .features-grid-home {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .steps-grid {
+    @apply grid-cols-1;
+  }
+
+  .benefits-content {
+    @apply grid-cols-1 gap-8;
+  }
+
+  .visual-card {
+    @apply w-52 h-52;
+  }
+
+  .visual-icon {
+    @apply w-20 h-20;
+  }
+
+  .cta-title-home {
+    @apply text-2xl;
+  }
+
+  .cta-subtitle-home {
+    @apply text-base;
+  }
+
+  .cta-button-home {
+    @apply px-8 py-4 text-lg;
+  }
+}
+
+/* Mobile - Large (480px - 639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+  .action-buttons {
+    @apply flex-col gap-3;
+  }
+
+  .action-button {
+    @apply w-full px-6 py-3 text-base;
+  }
+
+  .stats-container {
+    @apply grid-cols-2 gap-3;
+  }
+
+  .stat-item {
+    @apply p-4;
+  }
+
+  .stat-icon-wrapper {
+    @apply w-10 h-10 mb-3;
+  }
+
+  .stat-value {
+    @apply text-2xl;
+  }
+
+  .stat-label {
+    @apply text-xs;
+  }
+
+  .section-title-home {
+    @apply text-2xl;
+  }
+
+  .section-subtitle-home {
+    @apply text-base;
+  }
+
+  .features-grid-home {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .steps-grid {
+    @apply grid-cols-1;
+  }
+
+  .step-number {
+    @apply text-xl;
+  }
+
+  .step-title {
+    @apply text-xl;
+  }
+
+  .benefits-content {
+    @apply grid-cols-1 gap-6;
+  }
+
+  .benefits-title {
+    @apply text-2xl;
+  }
+
+  .visual-card {
+    @apply w-48 h-48;
+  }
+
+  .visual-icon {
+    @apply w-16 h-16;
+  }
+
+  .cta-title-home {
+    @apply text-2xl;
+  }
+
+  .cta-subtitle-home {
+    @apply text-base;
+  }
+
+  .cta-button-home {
+    @apply px-6 py-3 text-base;
+  }
+}
+
+/* Mobile - Small (< 480px) */
+@media (max-width: 479px) {
+  .quick-actions {
+    @apply -mt-6 px-2;
+  }
+
+  .action-buttons {
+    @apply flex-col gap-2;
+  }
+
+  .action-button {
+    @apply w-full px-5 py-2.5 text-sm;
+    @apply gap-2;
+  }
+
+  .stats-section-home {
+    @apply py-12 px-2;
+  }
+
+  .stats-container {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .stat-item {
+    @apply p-4;
+  }
+
+  .stat-icon-wrapper {
+    @apply w-9 h-9 mb-2;
+  }
+
+  .stat-value {
+    @apply text-xl;
+  }
+
+  .stat-label {
+    @apply text-xs;
+  }
+
+  .features-section-home,
+  .benefits-section-home,
+  .cta-section-home {
+    @apply py-12 px-2;
+  }
+
+  .section-header {
+    @apply mb-8;
+  }
+
+  .section-title-home {
+    @apply text-xl;
+  }
+
+  .section-subtitle-home {
+    @apply text-sm;
+  }
+
+  .features-grid-home {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .steps-grid {
+    @apply grid-cols-1;
+  }
+
+  .step-number {
+    @apply text-lg;
+  }
+
+  .step-title {
+    @apply text-lg;
+  }
+
+  .step-description {
+    @apply text-sm;
+  }
+
+  .benefits-content {
+    @apply grid-cols-1 gap-6;
+  }
+
+  .benefits-title {
+    @apply text-xl;
+  }
+
+  .benefits-subtitle {
+    @apply text-sm;
+  }
+
+  .visual-card {
+    @apply w-40 h-40 rounded-2xl;
+  }
+
+  .visual-icon {
+    @apply w-14 h-14;
+  }
+
+  .cta-title-home {
+    @apply text-xl;
+  }
+
+  .cta-subtitle-home {
+    @apply text-sm;
+  }
+
+  .cta-button-home {
+    @apply px-5 py-3 text-base;
+    @apply gap-2;
+  }
+
+  .cta-disclaimer {
+    @apply text-xs;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    @apply grid-cols-2 gap-4;
+  }
+  
+  .features-grid-home {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .steps-grid {
+    @apply grid-cols-1;
+  }
+  
+  .benefits-content {
+    @apply grid-cols-1;
+  }
+  
+  .visual-card {
+    @apply w-48 h-48;
+  }
+  
+  .visual-icon {
+    @apply w-16 h-16;
+  }
+}

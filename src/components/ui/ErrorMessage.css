@@ -1,0 +1,25 @@
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--danger-light);
+  border: 1.5px solid color-mix(in srgb, var(--danger) 35%, transparent);
+  border-radius: var(--radius-md);
+  color: var(--danger);
+  font-weight: 600;
+  margin-top: var(--space-3);
+  animation: slideDown var(--transition-base) ease;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--danger) 12%, transparent);
+}
+
+.error-message__icon {
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.error-message__text {
+  flex: 1;
+  line-height: 1.5;
+  font-size: var(--font-size-sm);
+}

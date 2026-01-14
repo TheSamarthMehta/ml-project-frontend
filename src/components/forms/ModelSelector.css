@@ -1,0 +1,18 @@
+.model-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .model-selector {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .model-selector {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}

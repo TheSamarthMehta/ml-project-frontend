@@ -1,0 +1,131 @@
+/* Footer Styles */
+.footer {
+  @apply mt-auto pt-16 pb-8;
+  @apply bg-gradient-to-b from-transparent to-slate-100/50;
+  @apply dark:to-slate-900/50;
+  @apply border-t border-slate-200 dark:border-slate-800;
+}
+
+.footer-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12;
+}
+
+/* Brand Section */
+.footer-brand {
+  @apply lg:col-span-1;
+}
+
+.footer-logo {
+  @apply flex items-center gap-2 mb-4;
+}
+
+.footer-logo-icon {
+  @apply w-8 h-8 rounded-lg;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+  @apply flex items-center justify-center;
+  @apply text-white;
+}
+
+.footer-logo-text {
+  @apply font-bold text-lg;
+  @apply text-slate-900 dark:text-white;
+}
+
+.footer-description {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+  @apply leading-relaxed mb-6;
+}
+
+.footer-social {
+  @apply flex items-center gap-3;
+}
+
+.social-link {
+  @apply w-10 h-10 rounded-full;
+  @apply bg-slate-200 dark:bg-slate-800;
+  @apply flex items-center justify-center;
+  @apply text-slate-600 dark:text-slate-400;
+  @apply transition-all duration-300;
+  @apply hover:bg-accent hover:text-white;
+  @apply hover:scale-110 hover:shadow-lg hover:shadow-accent/30;
+}
+
+/* Footer Sections */
+.footer-section h3.footer-title {
+  @apply text-sm font-bold uppercase tracking-wider;
+  @apply text-slate-900 dark:text-white;
+  @apply mb-4;
+}
+
+.footer-links {
+  @apply space-y-3;
+  @apply list-none;
+}
+
+.footer-links li a {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+  @apply transition-colors duration-200;
+  @apply hover:text-accent;
+  @apply inline-block;
+}
+
+.footer-contact {
+  @apply space-y-3;
+  @apply list-none;
+}
+
+.footer-contact li {
+  @apply flex items-start gap-3;
+  @apply text-sm text-slate-600 dark:text-slate-400;
+}
+
+.footer-contact li svg {
+  @apply flex-shrink-0 mt-0.5 text-accent;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  @apply pt-8 border-t border-slate-200 dark:border-slate-800;
+  @apply flex flex-col md:flex-row items-center justify-between gap-4;
+  @apply text-center md:text-left;
+}
+
+.footer-copyright {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+}
+
+.footer-disclaimer {
+  @apply text-xs text-slate-500 dark:text-slate-500;
+  @apply max-w-2xl;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-grid {
+    @apply gap-10;
+  }
+  
+  .footer-brand {
+    @apply text-center;
+  }
+  
+  .footer-logo {
+    @apply justify-center;
+  }
+  
+  .footer-social {
+    @apply justify-center;
+  }
+  
+  .footer-section {
+    @apply text-center;
+  }
+  
+  .footer-contact li {
+    @apply justify-center;
+  }
+}

@@ -1,0 +1,437 @@
+/* CSS Variables for Unified Medical-Grade Design System */
+:root {
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-radius: 16px;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --card-padding: 2rem;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #a855f7;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: rgba(15, 23, 42, 0.85);
+    --card-border: rgba(100, 116, 139, 0.2);
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+  }
+  
+  .dashboard-page {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.form-section,
+.results-section {
+  width: 100%;
+}
+
+/* Card Header Design */
+.card-header-with-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.card-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2;
+}
+
+.card-main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.card-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.card-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-primary);
+  opacity: 0.9;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Form Layout */
+.assessment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.form-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.form-field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.lifestyle-section {
+  padding: 1.5rem;
+  background: #f1f5f9;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+}
+
+.lifestyle-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1.25rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lifestyle-section {
+    background: rgba(30, 41, 59, 0.4);
+    border-color: rgba(100, 116, 139, 0.2);
+  }
+
+  .lifestyle-title {
+    color: var(--text-primary);
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--spacing-md);
+}
+
+.generate-button {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.generate-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Results Section */
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.results-section-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 116, 139, 0.15);
+}
+
+.results-section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--spacing-sm) 0;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.result-message-box {
+  padding: var(--spacing-lg);
+  background: rgba(99, 102, 241, 0.08);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.results-placeholder {
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  color: var(--text-tertiary);
+}
+
+.placeholder-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto var(--spacing-md);
+  opacity: 0.4;
+  stroke-width: 1.5;
+}
+
+.placeholder-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.placeholder-text {
+  font-size: 0.95rem;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--text-tertiary);
+}
+
+/* Responsive Styles */
+
+/* Tablet - Portrait and Landscape (640px - 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .dashboard-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-main-title {
+    font-size: 1.375rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .form-section-group,
+  .results-section-group {
+    padding: var(--spacing-lg);
+  }
+
+  .form-row-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .generate-button {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile - Large (480px - 639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+  .dashboard-container {
+    padding: var(--spacing-md);
+  }
+
+  .card-header-with-icon {
+    gap: var(--spacing-md);
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .card-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .card-main-title {
+    font-size: 1.25rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .form-section-group,
+  .results-section-group {
+    padding: var(--spacing-md);
+  }
+
+  .form-row-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .generate-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .placeholder-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .placeholder-title {
+    font-size: 1.125rem;
+  }
+
+  .placeholder-text {
+    font-size: 0.875rem;
+  }
+}
+
+/* Mobile - Small (< 480px) */
+@media (max-width: 479px) {
+  .dashboard-container {
+    padding: var(--spacing-sm) var(--spacing-xs);
+  }
+
+  .card-header-with-icon {
+    gap: var(--spacing-sm);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card-main-title {
+    font-size: 1.125rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8125rem;
+  }
+
+  .form-section-group,
+  .results-section-group {
+    padding: var(--spacing-sm);
+  }
+
+  .form-row-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .generate-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .placeholder-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .placeholder-title {
+    font-size: 1rem;
+  }
+
+  .placeholder-text {
+    font-size: 0.8125rem;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .results-section-title {
+    font-size: 0.8125rem;
+  }
+
+  .result-message-box {
+    padding: var(--spacing-md);
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-container {
+    padding: var(--spacing-md);
+  }
+  
+  .form-section-group,
+  .results-section-group {
+    padding: var(--spacing-md);
+  }
+  
+  .form-row-grid {
+    grid-template-columns: 1fr;
+  }
+}

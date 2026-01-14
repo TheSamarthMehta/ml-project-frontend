@@ -1,0 +1,466 @@
+/* Features Page Styles */
+.features-page {
+  @apply min-h-screen;
+}
+
+/* Main Features Section */
+.main-features-section {
+  @apply py-20 px-4;
+  @apply max-w-7xl mx-auto;
+  @apply mt-8;
+}
+
+.features-grid-main {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.main-feature-card {
+  @apply p-8 h-full;
+  @apply transition-all duration-300;
+  @apply hover:shadow-2xl hover:scale-105;
+}
+
+.main-feature-icon {
+  @apply w-16 h-16 rounded-2xl mb-6;
+  @apply flex items-center justify-center;
+  @apply text-white;
+  @apply shadow-xl;
+}
+
+.main-feature-title {
+  @apply text-2xl font-bold mb-4;
+  @apply text-slate-900 dark:text-white;
+}
+
+.main-feature-description {
+  @apply text-slate-600 dark:text-slate-300;
+  @apply leading-relaxed;
+}
+
+/* Additional Features Section */
+.additional-features-section {
+  @apply py-16 px-4;
+  @apply max-w-7xl mx-auto;
+  @apply bg-slate-50/50 dark:bg-slate-900/30;
+  @apply rounded-3xl;
+  @apply my-8;
+}
+
+.additional-features-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.additional-feature-card {
+  @apply p-6 rounded-2xl;
+  @apply bg-white dark:bg-slate-800;
+  @apply border border-slate-200 dark:border-slate-700;
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl;
+}
+
+.additional-feature-icon {
+  @apply w-12 h-12 rounded-xl mb-4;
+  @apply bg-gradient-to-br from-blue-500 to-blue-600;
+  @apply flex items-center justify-center;
+  @apply text-white;
+}
+
+.additional-feature-title {
+  @apply text-lg font-bold mb-2;
+  @apply text-slate-900 dark:text-white;
+}
+
+.additional-feature-description {
+  @apply text-sm text-slate-600 dark:text-slate-400;
+  @apply leading-relaxed;
+}
+
+/* Models Section */
+.models-section {
+  @apply py-16 px-4;
+  @apply max-w-6xl mx-auto;
+}
+
+.models-grid {
+  @apply space-y-4;
+}
+
+.model-card {
+  @apply p-6;
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl hover:scale-[1.02];
+}
+
+.model-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.model-name {
+  @apply text-xl font-bold;
+  @apply text-slate-900 dark:text-white;
+}
+
+.model-accuracy {
+  @apply px-4 py-2 rounded-full;
+  @apply bg-gradient-to-r from-emerald-500 to-green-500;
+  @apply text-white font-bold;
+  @apply shadow-lg;
+}
+
+.model-description {
+  @apply text-slate-600 dark:text-slate-300;
+  @apply leading-relaxed;
+}
+
+/* Benefits Section */
+.benefits-section {
+  @apply py-16 px-4;
+  @apply max-w-5xl mx-auto;
+}
+
+.benefits-grid {
+  @apply grid md:grid-cols-2 gap-4;
+}
+
+.benefit-item {
+  @apply flex items-start gap-3 p-4 rounded-xl;
+  @apply bg-white dark:bg-slate-800;
+  @apply border border-slate-200 dark:border-slate-700;
+  @apply transition-all duration-300;
+  @apply hover:shadow-lg hover:border-accent;
+}
+
+.benefit-icon {
+  @apply w-6 h-6 flex-shrink-0 text-accent mt-0.5;
+}
+
+/* CTA Section */
+.features-cta-section {
+  @apply py-16 px-4;
+  @apply max-w-4xl mx-auto;
+}
+
+.features-cta-card {
+  @apply p-12 rounded-3xl text-center;
+  @apply bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-600;
+  @apply text-white;
+  @apply shadow-2xl;
+}
+
+.features-cta-title {
+  @apply text-3xl md:text-4xl font-bold mb-4;
+}
+
+.features-cta-text {
+  @apply text-lg mb-8 opacity-90;
+}
+
+.features-cta-buttons {
+  @apply flex flex-wrap items-center justify-center gap-4;
+}
+
+.cta-button {
+  @apply inline-block px-8 py-4 rounded-xl;
+  @apply font-bold text-lg;
+  @apply transition-all duration-300;
+  @apply no-underline;
+}
+
+.cta-button.primary {
+  @apply bg-white text-accent;
+  @apply hover:shadow-2xl;
+}
+
+.cta-button.secondary {
+  @apply bg-white/10 text-white;
+  @apply border-2 border-white;
+  @apply hover:bg-white/20;
+}
+
+/* Section Common Styles */
+.section-header {
+  @apply text-center mb-12;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-4;
+  @apply text-slate-900 dark:text-white;
+}
+
+.section-subtitle {
+  @apply text-lg text-slate-600 dark:text-slate-400;
+}
+
+/* Responsive Styles */
+
+/* Tablet - Portrait (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .main-features-section,
+  .models-section,
+  .benefits-section,
+  .features-cta-section {
+    @apply py-12 px-3;
+  }
+
+  .additional-features-section {
+    @apply py-10 px-3 my-6;
+  }
+
+  .features-grid-main {
+    @apply grid-cols-1 gap-6;
+  }
+
+  .main-feature-card {
+    @apply p-6;
+  }
+
+  .main-feature-icon {
+    @apply w-14 h-14 mb-5;
+  }
+
+  .main-feature-title {
+    @apply text-xl;
+  }
+
+  .additional-features-grid {
+    @apply grid-cols-2 gap-5;
+  }
+
+  .model-card {
+    @apply p-5;
+  }
+
+  .model-name {
+    @apply text-lg;
+  }
+
+  .benefits-grid {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .features-cta-card {
+    @apply p-8;
+  }
+
+  .features-cta-title {
+    @apply text-2xl;
+  }
+
+  .features-cta-text {
+    @apply text-base;
+  }
+
+  .cta-button {
+    @apply px-6 py-3 text-base;
+  }
+}
+
+/* Mobile - Large (480px - 639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+  .main-features-section,
+  .models-section,
+  .benefits-section,
+  .features-cta-section {
+    @apply py-10 px-3;
+  }
+
+  .additional-features-section {
+    @apply py-8 px-3 my-5 rounded-2xl;
+  }
+
+  .features-grid-main {
+    @apply grid-cols-1 gap-5;
+  }
+
+  .main-feature-card {
+    @apply p-6;
+  }
+
+  .main-feature-icon {
+    @apply w-12 h-12 mb-4;
+  }
+
+  .main-feature-title {
+    @apply text-xl;
+  }
+
+  .main-feature-description {
+    @apply text-sm;
+  }
+
+  .additional-features-grid {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .additional-feature-card {
+    @apply p-5;
+  }
+
+  .model-card {
+    @apply p-5;
+  }
+
+  .model-name {
+    @apply text-lg;
+  }
+
+  .model-description {
+    @apply text-sm;
+  }
+
+  .benefits-grid {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .features-cta-card {
+    @apply p-8;
+  }
+
+  .features-cta-title {
+    @apply text-2xl;
+  }
+
+  .features-cta-text {
+    @apply text-base;
+  }
+
+  .cta-button {
+    @apply px-6 py-3 text-base;
+  }
+}
+
+/* Mobile - Small (< 480px) */
+@media (max-width: 479px) {
+  .main-features-section,
+  .models-section,
+  .benefits-section,
+  .features-cta-section {
+    @apply py-8 px-2;
+  }
+
+  .additional-features-section {
+    @apply py-6 px-2 my-4 rounded-2xl;
+  }
+
+  .section-header {
+    @apply mb-8;
+  }
+
+  .section-title {
+    @apply text-xl;
+  }
+
+  .section-subtitle {
+    @apply text-sm;
+  }
+
+  .features-grid-main {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .main-feature-card {
+    @apply p-5;
+  }
+
+  .main-feature-icon {
+    @apply w-12 h-12 mb-4 rounded-xl;
+  }
+
+  .main-feature-title {
+    @apply text-lg;
+  }
+
+  .main-feature-description {
+    @apply text-sm;
+  }
+
+  .additional-features-grid {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .additional-feature-card {
+    @apply p-5;
+  }
+
+  .additional-feature-icon {
+    @apply w-10 h-10 mb-3;
+  }
+
+  .additional-feature-title {
+    @apply text-base;
+  }
+
+  .additional-feature-description {
+    @apply text-xs;
+  }
+
+  .models-grid {
+    @apply space-y-3;
+  }
+
+  .model-card {
+    @apply p-5;
+  }
+
+  .model-header {
+    @apply flex-col items-start gap-3;
+  }
+
+  .model-name {
+    @apply text-base;
+  }
+
+  .model-accuracy {
+    @apply px-3 py-1.5 text-sm;
+  }
+
+  .model-description {
+    @apply text-sm;
+  }
+
+  .benefits-grid {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .benefit-item {
+    @apply p-3;
+  }
+
+  .benefit-icon {
+    @apply w-5 h-5;
+  }
+
+  .features-cta-card {
+    @apply p-6 rounded-2xl;
+  }
+
+  .features-cta-title {
+    @apply text-xl;
+  }
+
+  .features-cta-text {
+    @apply text-sm mb-6;
+  }
+
+  .features-cta-buttons {
+    @apply flex-col gap-3;
+  }
+
+  .cta-button {
+    @apply w-full px-5 py-3 text-base rounded-lg;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-title {
+    @apply text-3xl;
+  }
+  
+  .features-grid-main {
+    @apply grid-cols-1;
+  }
+  
+  .additional-features-grid {
+    @apply grid-cols-1;
+  }
+}

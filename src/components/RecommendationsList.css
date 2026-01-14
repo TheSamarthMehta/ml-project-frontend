@@ -1,0 +1,112 @@
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.recommendation-card {
+  transition: all 0.2s ease;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: var(--space-6);
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #6366f1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.recommendation-card:hover::before {
+  transform: scaleX(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .recommendation-card {
+    background: #1e293b;
+    border-color: rgba(51, 65, 85, 0.6);
+  }
+
+  .recommendation-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+  }
+}
+
+.recommendation-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .recommendation-card__header {
+    border-bottom-color: rgba(51, 65, 85, 0.6);
+  }
+}
+
+.recommendation-card__icon {
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.recommendation-card__title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--text-1);
+  letter-spacing: -0.025em;
+}
+
+.recommendation-card__list {
+  margin: 0;
+  padding-left: var(--space-5);
+  color: var(--text-2);
+  line-height: 1.8;
+  list-style: none;
+}
+
+.recommendation-card__list li {
+  margin-bottom: var(--space-3);
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.recommendation-card__list li::before {
+  content: '→';
+  position: absolute;
+  left: calc(var(--space-5) * -1);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.recommendation-card__list li:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,190 @@
+.enhanced-risk-meter {
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(203, 213, 225, 0.5);
+}
+
+.enhanced-risk-meter__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.enhanced-risk-meter__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.enhanced-risk-meter__gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6) 0;
+}
+
+.enhanced-risk-meter__gauge-wrapper {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.enhanced-risk-meter__gauge-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.02) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.enhanced-risk-meter__label-container {
+  margin-top: var(--space-2);
+}
+
+.enhanced-risk-meter__badge {
+  font-size: var(--font-size-base);
+  padding: var(--space-3) var(--space-6);
+  font-weight: 600;
+}
+
+.enhanced-risk-meter__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.enhanced-risk-meter__detail-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.2s ease;
+}
+
+.enhanced-risk-meter__detail-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(248, 250, 252, 0.5);
+}
+
+.enhanced-risk-meter__detail-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-risk-meter__detail-content {
+  flex: 1;
+}
+
+.enhanced-risk-meter__detail-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.enhanced-risk-meter__detail-value {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-1);
+  margin-top: var(--space-1);
+  letter-spacing: -0.3px;
+}
+
+.enhanced-risk-meter__scale {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.enhanced-risk-meter__scale-bar {
+  position: relative;
+  display: flex;
+  height: 12px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-risk-meter__scale-segment {
+  flex: 1;
+}
+
+.enhanced-risk-meter__scale-segment--low {
+  background: linear-gradient(90deg, #15c47e 0%, #2adf98 100%);
+}
+
+.enhanced-risk-meter__scale-segment--medium {
+  background: linear-gradient(90deg, #f5a524 0%, #f5c06a 100%);
+}
+
+.enhanced-risk-meter__scale-segment--high {
+  background: linear-gradient(90deg, #ef4444 0%, #ff8b8b 100%);
+}
+
+.enhanced-risk-meter__scale-indicator {
+  position: absolute;
+  top: -8px;
+  width: 12px;
+  height: 28px;
+  transform: translateX(-50%);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--surface);
+  animation: slideDown var(--transition-base) ease;
+}
+
+.enhanced-risk-meter__scale-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-3);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.enhanced-risk-meter__scale-labels span {
+  text-align: center;
+}
+
+.enhanced-risk-meter__scale-labels small {
+  display: block;
+  font-size: 10px;
+  margin-top: 2px;
+  color: var(--text-2);
+}
+
+@media (max-width: 768px) {
+  .enhanced-risk-meter__gauge-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .enhanced-risk-meter__gauge-wrapper::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .enhanced-risk-meter__details {
+    grid-template-columns: 1fr;
+  }
+
+  .enhanced-risk-meter__detail-value {
+    font-size: var(--font-size-base);
+  }
+}
