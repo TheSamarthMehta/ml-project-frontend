@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import type { ModelCardInfo } from '../types/model'
 
-export const API_BASE = 'http://localhost:5000'
+export const API_BASE = 'https://ml-project-backend-a7n0.onrender.com'
 
 export const formSchema = z.object({
   age: z.coerce.number({
